@@ -1,9 +1,28 @@
-﻿namespace Prob510;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-class Program
+namespace Prob510
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello, World!");
+        static void Main(string[] args)
+        {
+            Random rnd = new Random();
+            int[] n = new int[7];
+
+            for (int i = 0; i < n.Length; i++)
+            {
+                n[i] = rnd.Next(1, 6);
+
+                for (int j = 0; j < n[i]; j++)
+                {
+                    Console.Write("☆");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
